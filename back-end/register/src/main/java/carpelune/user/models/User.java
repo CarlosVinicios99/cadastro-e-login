@@ -1,4 +1,4 @@
-package carpelune.user;
+package carpelune.user.models;
 
 import java.util.Objects;
 
