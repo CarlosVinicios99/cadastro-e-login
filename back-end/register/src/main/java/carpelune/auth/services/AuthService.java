@@ -33,7 +33,8 @@ public class AuthService {
 		
 		try {
 			User user = this.userRepository.findByEmail(loginRequestDto.email()).get();
-			if(this.passwordEncoder.matches(user.getPassword(), loginRequestDto.password())) {
+			
+			if(this.passwordEncoder.matches(loginRequestDto.password(), user.getPassword())) {
 				String token = this.tokenService.generateToken(user);
 				return ResponseEntity.status(HttpStatus.OK).body(new LoginResponseDTO(user.getName(), token));
 			}
