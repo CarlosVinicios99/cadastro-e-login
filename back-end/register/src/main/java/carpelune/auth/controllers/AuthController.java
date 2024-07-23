@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import carpelune.auth.dto.LoginRequestDTO;
 import carpelune.auth.dto.LoginResponseDTO;
+import carpelune.auth.dto.RegisterRequestDTO;
+import carpelune.auth.dto.RegisterResponseDTO;
 import carpelune.auth.services.AuthService;
 
 @RestController
@@ -22,6 +24,11 @@ public class AuthController {
 	@PostMapping("/login")
 	public ResponseEntity<LoginResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDto){
 		return this.authService.login(loginRequestDto);
+	}
+	
+	@PostMapping("/register")
+	public ResponseEntity<RegisterResponseDTO> register(@RequestBody RegisterRequestDTO registerRequestDto){
+		return this.authService.register(registerRequestDto);
 	}
 	
 }
