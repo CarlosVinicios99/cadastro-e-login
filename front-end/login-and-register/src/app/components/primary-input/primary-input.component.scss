@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+
+.input-wrapper {
+  input {
+    border-radius: 0.5rem;
+    border: none;
+    background-color: $gray-secondary-background;
+    color: $text-color;
+    font-size: 1rem;
+    padding: 0.75rem 0 0.75rem 1.25rem;
+    width: 100%;
+  }
+}
