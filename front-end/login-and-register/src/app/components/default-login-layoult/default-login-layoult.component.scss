@@ -26,17 +26,63 @@ main {
     padding: 0 2.25rem;
 
     h2 {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: bold;
+      margin-bottom: 2.75rem;
     }
 
-    button {
+    img {
+      margin-bottom: 1.9rem;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      border: none;
-      background-color: transparent;
+      gap: 1.9rem;
+
+      .divider {
+        font-size: 0.80rem;
+        color: $gray-background;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        text-transform: uppercase;
+        width: 100%;
+
+        div {
+          flex-grow: 1;
+          height: 0.1rem;
+          background-color: $gray-background;
+        }
+      }
+
+      button {
+        width: 100%;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        background-color: transparent;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+
+        &.btn-primary {
+          background-color: $primary-color;
+          color: white;
+          box-shadow:0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
+        }
+
+        &.btn-secondary {
+          border: 1px solid $primary-color;
+          color: $primary-color;
+        }
+      }
+
     }
   }
 

@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
 export class DefaultLoginLayoultComponent {
   @Input() title: string = ""
   @Input() primaryBtnText = ""
-  @Input() secundaryBtnText = ""
+  @Input() secondaryBtnText = ""
 }
