@@ -9,8 +9,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class DefaultLoginLayoultComponent {
   @Input() title: string = ""
-  @Input() primaryBtnText = ""
-  @Input() secondaryBtnText = ""
+  @Input() primaryBtnText: string = ""
+  @Input() secondaryBtnText: string = ""
+  @Input() disablePrimaryBtn: boolean = true
   @Output("submit") onSubmit = new EventEmitter()
   @Output("navigate") onNavigate = new EventEmitter()
 
