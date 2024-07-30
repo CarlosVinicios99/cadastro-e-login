@@ -1,21 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginResponse } from '../types/login-response.type';
 import { tap } from 'rxjs';
+import { RegisterResponse } from '../types/register-response';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class RegisterService {
 
   constructor(private httpClient: HttpClient) { }
 
-  login(name: string, password: string){
-    return this.httpClient.post<LoginResponse>(
-      "http://localhost:8080/auth/login",
+  register(name: string, email: string, password: string, passwordConfirm: string){
+    return this.httpClient.post<RegisterResponse>(
+      "http://localhost:8080/auth/register",
       {
+        email,
         name,
-        password
+        password,
+        passwordConfirm
       }
     ).pipe(
       tap((value) => {

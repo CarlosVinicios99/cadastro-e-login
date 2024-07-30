@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { PrimaryInputComponent } from '../../components/primary-input/primary-input.component';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { RegisterService } from '../../services/register.service';
 
 @Component({
   selector: 'app-register',
@@ -22,6 +23,7 @@ export class RegisterComponent {
 
   constructor(
     private router: Router,
+    private registerService: RegisterService,
     private toastService: ToastrService
   ){
     this.registerForm = new FormGroup({
@@ -32,15 +34,18 @@ export class RegisterComponent {
     })
   }
 
-  /*
+
   submit(){
-    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
-      .subscribe({
-        next: () => this.toastService.success("Login realizado com sucesso!"),
+    this.registerService.register(
+      this.registerForm.value.name,
+      this.registerForm.value.email,
+      this.registerForm.value.password,
+      this.registerForm.value.passwordConfirm
+    ).subscribe({
+        next: () => this.toastService.success("Registro realizado com sucesso!"),
         error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
-      })
+    })
   }
-  */
 
   navigate(){
     this.router.navigate(["/login"])
