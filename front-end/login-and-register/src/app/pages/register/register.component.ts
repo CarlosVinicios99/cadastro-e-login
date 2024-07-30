@@ -43,7 +43,7 @@ export class RegisterComponent {
   */
 
   navigate(){
-    this.router.navigate(["/register"])
+    this.router.navigate(["/login"])
   }
 
 }
