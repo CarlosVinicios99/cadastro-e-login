@@ -1,4 +1,4 @@
-# Login e Registro Com Java e Angular
+# Login e Registro - Java + Angular
 <p>
    Projeto full-stack login e registro desenvolvido com o objetivo de explorar recursos e funcionalides do novo Angular na versão 17. Além do Angular 17, foram utilizadas as demais tecnologias: 
   Java, Spring, Spring Security, autenticação JWT, Configuração de CORS e Swagger.
